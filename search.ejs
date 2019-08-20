@@ -1,0 +1,15 @@
+<h1>
+    Search for your movie
+</h1>
+
+
+<form action="/results" method="GET"> <!-- see once u hit the submit button...the control is back to the main movieapi.js whereinwhich the control automatically searches for the get request(app.get('/results')) page mentioned in action...now the new page results.ejs is renderedafter running th codein that get request function-->
+    <input type="text" name="search" value="" placeholder="movie-name" required></input>
+    <input type="text" name="yr" value="" placeholder="year"></input> <!-- here value attr is default value..if u give no input then that text in value will be taken as default value-->
+    <select name="gen">
+        <option>movie</option>
+        <option>series</option>
+        <option>episode</option>
+    </select>
+    <button>Submit</button> <!-- now extraction of data shud begin in the function that renders result.ejs and not inthe function the renders search.ejs-->
+</form>
